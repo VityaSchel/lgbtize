@@ -1,7 +1,29 @@
-# LGBTize
+# LGBT
+
+![Putin](./putin.png)
 
 Node.js utilities to LGBTize anything.
 
 ## lgbt(pathToImage: string)
 
-Uses ImageMagick under the hood
+Uses ImageMagick's hue shifting under the hood
+
+Example:
+```ts
+import { lgbt } from 'lgbt'
+
+const bufferResult = await lgbt('/Users/Putin/Desktop/me.png')
+console.log(bufferResult)
+```
+
+## lgbtPhrase(phrase: string)
+
+Insert rainbow flags AND other lgbt-ish things 💅🏼🏳️‍🌈 
+
+Example:
+```ts
+import { lgbtPhrase } from 'lgbt'
+
+const newPhrase = lgbtPhrase('I am 100% Straight and I am not gay.')
+console.log(newPhrase) // I 🌈 am 🌈 100% 💅🏼 Straight 🏳️‍🌈 and 🏳️‍⚧️ I 🏳️‍⚧️ am 💅🏼 not 🌈 gay. 💅🏼
+```
