@@ -1,6 +1,6 @@
 # LGBT
 
-![Putin](./putin.png)
+![Putin](https://imgdb.net/storage/uploads/68590e7a835f3dd5cf2f82cdbce3de591ecfb03850c32e9ca62a7d0ad1246fe3.png)
 
 Node.js utilities to LGBTize anything.
 

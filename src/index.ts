@@ -8,11 +8,10 @@ export async function lgbt(pathToImage: string): Promise<Buffer> {
   const outputs: string[] = []
   const colors = ['red', 'orange', 'yellow', 'green', 'DeepSkyBlue1', 'blue', 'DarkMagenta']
   const extension = path.extname(pathToImage)
-  for(let i = 0; i < colors.length; i++) {
+
+  const generatePart = async (i: number) => {
     const output = `${tmp}/${uuid()}${extension}`
     const step = 1/(colors.length)
-    // const crop = generateCrop(i*100, step*100)
-    // console.log(crop)
     const [convertionError] = await new Promise<[Error, any]>(resolve => 
       im.convert([
         pathToImage,
@@ -33,6 +32,8 @@ export async function lgbt(pathToImage: string): Promise<Buffer> {
     outputs.push(output)
   }
 
+  await Promise.all(colors.map((_, i) => generatePart(i)))
+
   const resultOutput = `${tmp}/${uuid()}${extension}`
   const [appendError] = await new Promise<[Error, any]>(resolve =>
     im.convert([
@@ -48,13 +49,12 @@ export async function lgbt(pathToImage: string): Promise<Buffer> {
   }
   
   const resultOutputBuffer = fs.readFile(resultOutput)
-  console.log(resultOutput)
-  // await fs.rm(resultOutput)
+  await fs.rm(resultOutput)
   
   return resultOutputBuffer
 }
 
-export async function lgbtPhrase(phrase: string): string {
+export function lgbtPhrase(phrase: string): string {
   return phrase.replaceAll(
     /( |\n|$)/g, () => ' ' + ['🏳️‍🌈', '💅🏼', '🏳️‍⚧️', '👨‍❤️‍👨', '🌈'][Math.floor(Math.random() * 5)] + ' '
   )
