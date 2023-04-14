@@ -14,10 +14,9 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.0",
-    "lgbt": "^1.0.5",
+    "lgbt": "^1.0.6",
     "node-telegram-bot-api": "^0.61.0",
-    "temp-dir": "^3.0.0",
-    "uuid": "^9.0.0"
+    "temp-dir": "^3.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.19.4",

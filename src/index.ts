@@ -1,7 +1,6 @@
 import './env.js'
 import TelegramBot from 'node-telegram-bot-api'
 import tmp from 'temp-dir'
-import { v5 as uuid } from 'uuid'
 import { lgbt } from 'lgbt'
 
 const token = process.env.TOKEN
