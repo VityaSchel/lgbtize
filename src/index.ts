@@ -5,7 +5,6 @@ import path from 'path'
 import fs from 'fs/promises'
 
 export async function lgbt(pathToImage: string): Promise<Buffer> {
-  const outputs: string[] = []
   const colors = ['red', 'orange', 'yellow', 'green', 'DeepSkyBlue1', 'blue', 'DarkMagenta']
   const extension = path.extname(pathToImage)
 
@@ -29,10 +28,10 @@ export async function lgbt(pathToImage: string): Promise<Buffer> {
         output
       ], (err, result) => resolve([err, result])))
     if(convertionError) throw convertionError
-    outputs.push(output)
+    return output
   }
 
-  await Promise.all(colors.map((_, i) => generatePart(i)))
+  const outputs: string[] = await Promise.all(colors.map((_, i) => generatePart(i)))
 
   const resultOutput = `${tmp}/${uuid()}${extension}`
   const [appendError] = await new Promise<[Error, any]>(resolve =>
