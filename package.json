@@ -1,6 +1,6 @@
 {
   "name": "lgbt",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "LGBTize anything",
   "main": "out/index.js",
   "type": "module",

@@ -4,6 +4,8 @@
 
 Node.js utilities to LGBTize anything.
 
+Check out [Telegram bot](https://t.me/lgbtize_bot) that paints pictures to LGBT flag.
+
 ## lgbt(pathToImage: string)
 
 Uses ImageMagick's hue shifting under the hood
