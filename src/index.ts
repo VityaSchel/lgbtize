@@ -16,7 +16,7 @@ bot.on('message', async (event) => {
   const photo = event.photo.sort((photo1, photo2) => photo2.width*photo2.height - photo1.width*photo1.height)[0]
   const file = await bot.downloadFile(photo.file_id, tmp)
 
-  const msg = await bot.sendMessage(event.chat.id, 'Пидоризация... 🏳️‍🌈')
+  const msg = await bot.sendMessage(event.chat.id, ['ЛГБТизация', 'ТейлорСвифтизация', 'АрианаГрандезация', 'Апгрейд', 'Мачелаттезация'][Math.floor(Math.random() * 5)] + '... 🏳️‍🌈')
   
   const result = await lgbt(file)
   await bot.deleteMessage(event.chat.id, msg.message_id)
