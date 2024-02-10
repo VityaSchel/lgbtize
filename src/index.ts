@@ -5,7 +5,7 @@ import path from 'path'
 import fs from 'fs/promises'
 
 export async function lgbt(pathToImage: string): Promise<Buffer> {
-  const colors = ['red', 'orange', 'yellow', 'green', 'DeepSkyBlue1', 'blue', 'DarkMagenta']
+  const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'DarkMagenta']
   const extension = path.extname(pathToImage)
 
   const generatePart = async (i: number) => {
