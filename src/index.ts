@@ -20,7 +20,7 @@ export async function lgbt(pathToImage: string): Promise<Buffer> {
         '-crop',
         `0%x${step*100}%+0+0`,
         '-colorspace',
-        'gray', // haha fvery funny go fuck yousefl
+        'gray', // haha fvery funny
         '-fill',
         colors[i],
         '-tint',

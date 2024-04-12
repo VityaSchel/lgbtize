@@ -7,8 +7,7 @@
   "scripts": {
     "prebuild": "del out/",
     "build": "swc ./src -d ./out --copy-files",
-    "start": "node out/index.js",
-    "test": "jest"
+    "start": "node out/index.js"
   },
   "author": "Viktor Shchelochkov <hi@hloth.dev> (https://hloth.dev/)",
   "license": "MIT",
