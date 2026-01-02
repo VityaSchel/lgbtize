@@ -18,5 +18,8 @@ bot.on('message', async (event) => {
 	
 	const result = await lgbt(file);
 	await bot.deleteMessage(event.chat.id, msg.message_id);
-	await bot.sendPhoto(event.chat.id, Buffer.from(result));
+	await bot.sendPhoto(event.chat.id, Buffer.from(result), {}, {
+		contentType: "image/png",
+		"filename": "lgbt.png"
+	});
 });
