@@ -1,16 +1,12 @@
 {
 	"name": "@hloth/lgbt",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"license": "MIT",
 	"exports": "./index.ts",
 	"imports": {
 		"bun": "npm:@types/bun@latest"
 	},
-	"include": [
-		"README.md",
-		"LICENSE",
-		"index.ts"
-	],
+	"include": ["README.md", "LICENSE", "index.ts"],
 	"exclude": [
 		"test.ts",
 		"bun.lock",
@@ -18,6 +14,7 @@
 		"old-mudila.avif",
 		".gitignore",
 		"tsconfig.json",
-		"jsr.json"
+		"jsr.json",
+		".prettierrc"
 	]
 }
